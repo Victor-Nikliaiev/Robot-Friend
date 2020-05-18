@@ -1,0 +1,178 @@
+body{
+	background-image: url("background.jpg") ;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: top;	
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.android {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	align-content: center;
+	filter: drop-shadow(0 0 0.75rem rgb(174, 122, 241));
+	transition: transform 600ms ease-in ;
+	cursor: pointer;
+	filter: brightness(200%) contrast(150%);
+}
+
+.audio {
+	text-align: center;
+	margin-bottom:  40px;
+	background-color: #adff2f;
+	animation-name: blur;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes blur{
+	0% {filter: blur(4px);}
+	100%{filter: blur(0px);}
+}
+.android:active{
+	z-index: -1;
+	transform: translate(0px, -50px);
+	filter: brightness(200%) contrast(150%) drop-shadow(20px 200px 100px rgb(236, 120, 25));
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #15471D;
+}
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	display: flex;	
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+	align-self: center;
+	align-items: center;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	position: relative;
+	left: 10px;
+	margin-right: 10px; 
+	transition: transform 1s;
+} 
+
+.left_arm:hover {
+	transform: rotate(40deg);
+	transform-origin: 60% 30%;
+}
+
+.right_arm { 
+	margin-left: 10px; 
+	position: relative;
+	right: 10px;
+	transition: transform 1s;
+	
+} 
+
+.right_arm:hover{
+	transform: rotate(-40deg);
+	transform-origin: 60% 30%;
+}
+
+.torso { 
+	background-size: cover;
+	background-image: url("https://cdn.shopify.com/s/files/1/0030/3802/products/Superman_5_copy_aefd177a-56e7-4c6b-b720-a46a4410329e.jpg?v=1464408298");
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	display: flex;
+	margin: 0 auto;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+	transition: transform 1s;
+} 
+
+.left_leg:hover {
+	transform: rotate(20deg);
+	transform-origin: 60% 20%;
+}
+
+.right_leg { 
+	transition: transform 1s;
+	margin-left: 30px; 
+}
+
+.right_leg:hover{
+	transform: rotate(-20deg);
+	transform-origin: 60% 20%;
+}
+
+.left_eye, .right_eye { 
+	animation-name: colored_eyes;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: #4CE01C;
+	
+} 
+
+@keyframes colored_eyes {
+	0% {background-color: #4CE01C;}
+	25% {background-color: rgb(73, 88, 224);}
+	50% {background-color: rgb(224, 43, 119);}
+	75% {background-color: rgb(228, 39, 95);}
+	100% {background-color: rgb(215, 218, 40);}
+}
+.left_eye {  
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
